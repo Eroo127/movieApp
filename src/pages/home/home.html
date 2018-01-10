@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-fab right bottom>
+    <button ion-fab color="buttons" (click)="launchSearchModal()"><ion-icon name="search"></ion-icon></button>
+     </ion-fab>
+
+  <ion-list [virtualScroll]="genres ">
+    
+    <ion-item *virtualItem='let genre' text-wrap>
+
+
+    <button (click)="launchMoviesByGenrePage(genre)" ion-button clear color="dark"><h2 style="font-weight:bold;">{{genre.name}}</h2></button><br>
+      <p style="padding-left:15px;">Id: {{genre.id}}</p>
+
+      <h3 style="font-weight:bold;"></h3>
+      <p></p>   
+    </ion-item>
+  </ion-list>
+</ion-content>

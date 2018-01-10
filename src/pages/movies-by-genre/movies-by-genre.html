@@ -1,0 +1,35 @@
+<!--
+  Generated template for the MoviesByGenrePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>movies-by-genre</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list [virtualScroll]="movies ">
+    
+    <ion-item *virtualItem='let movie' text-wrap>
+
+    <ion-avatar item-start>
+      <img src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+    </ion-avatar>
+
+
+    <button (click)="launchMovieDetailsPage(movie)" ion-button clear color="dark"><h2 style="font-weight:bold;">{{movie.original_title}}</h2></button><br>
+      <p style="padding-left:15px;">Release Date: {{movie.release_date}}</p>
+
+      <h3 style="font-weight:bold;"></h3>
+      <p></p>   
+    </ion-item>
+  </ion-list>
+
+</ion-content>
