@@ -15,8 +15,6 @@ import { MovieServiceProvider } from '../providers/movie-service/movie-service';
   declarations: [
     MyApp,
    
-    
-
   ],
   imports: [
     BrowserModule,

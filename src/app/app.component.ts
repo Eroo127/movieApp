@@ -11,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'HomePage';
+  rootPage: any = 'HomePage'; //Lazy load the hompage
 
   pages: Array<{title: string, component: any}>;
 

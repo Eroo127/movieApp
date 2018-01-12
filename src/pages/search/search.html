@@ -8,6 +8,8 @@
 
   <ion-navbar color="secondary">
     <ion-title>Search</ion-title>
+
+    <!--Adds a close button to the navbar and assigns a click event to trigger the dismiss function to close the modal-->
     <ion-buttons end><button clear ion-button (click)="dismiss()"><ion-icon name="md-close-circle"></ion-icon></button></ion-buttons>
   </ion-navbar>
 
@@ -16,8 +18,10 @@
 
 <ion-content padding>
 
+ <!--Adds a search bar and an ionInput event to trigger the searchMovies function everytime a user types-->
   <ion-searchbar placeholder = "Search Movies" (ionInput)="searchMovies($event)"></ion-searchbar>
 
+  <!--Another virtual scroll ion-list that loops through the results of the search-->
     <ion-list [virtualScroll]="results">
     
     <ion-item *virtualItem='let movie' text-wrap>
@@ -26,7 +30,7 @@
       <img src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}">
     </ion-avatar>
 
-
+    <!--Adds a click event to trigger the launchMovieDetailsPage function to launch the movies modal and pass the movie object chosen by the user-->
     <button (click)="launchMovieDetailsPage(movie)" ion-button clear color="dark"><h2 style="font-weight:bold;">{{movie.original_title}}</h2></button><br>
       <p style="padding-left:15px;">Release Date: {{movie.release_date}}</p>
 

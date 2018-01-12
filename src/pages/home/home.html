@@ -8,15 +8,18 @@
 </ion-header>
 
 <ion-content padding>
+  <!--Use the ion-fab component to creat the FAB button and add a click event to trigger the launchSearchModal function -->
 <ion-fab right bottom>
     <button ion-fab color="buttons" (click)="launchSearchModal()"><ion-icon name="search"></ion-icon></button>
      </ion-fab>
 
+  <!--Pass the genres object into the virtual scroll-->
   <ion-list [virtualScroll]="genres ">
-    
+
+  <!--specify the individual object i.e let genre-->
     <ion-item *virtualItem='let genre' text-wrap>
 
-
+<!--Add a click event to trigger the launchMoviesByGenrePage function and pass in the genre object-->
     <button (click)="launchMoviesByGenrePage(genre)" ion-button clear color="dark"><h2 style="font-weight:bold;">{{genre.name}}</h2></button><br>
       <p style="padding-left:15px;">Id: {{genre.id}}</p>
 
