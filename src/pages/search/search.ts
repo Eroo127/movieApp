@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular'; //import the modal and view controllers
 import { MovieServiceProvider } from '../../providers/movie-service/movie-service'; //import the movie service
-import { MovieDetailsPage } from '../movie-details/movie-details';
+
 
 /**
  * Generated class for the SearchPage page.
