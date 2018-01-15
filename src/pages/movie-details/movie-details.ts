@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular'; //import the Nave 
 import { MovieServiceProvider } from '../../providers/movie-service/movie-service';
 
 /**

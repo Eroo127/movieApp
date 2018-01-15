@@ -11,7 +11,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class MovieServiceProvider {
 
-  apiKey:string = '9a32bccc0995a38d7c700d0b4fa8a79d'; //Insert your TMDb api key
+  apiKey:string = '<<api key>>'; //Insert your TMDb api key
 
   constructor(public http: Http) {
     console.log('Hello MovieServiceProvider Provider');
